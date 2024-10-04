@@ -1,5 +1,15 @@
 {% extends 'app/base.html.twig' %}
 
 {% block body %}
-    <h3>Теперь осталось сделать тестовое задание :)</h3>
+    <h3>Список статей</h3>
+
+    <ol>
+        {% for article in articles %}
+
+            <li>
+                <a href="/article/{{ article.slug }}">{{ article.title }}</a>
+            </li>
+
+        {% endfor %}
+    </ol>
 {% endblock %}

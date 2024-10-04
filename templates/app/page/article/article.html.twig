@@ -1,0 +1,15 @@
+{% extends 'app/base.html.twig' %}
+
+{% block body %}
+    <h3> {{ article.title }} </h3>
+
+    <p> id: {{ article.id }} </p>
+    <p> Заголовок: {{ article.title }} </p>
+    <p> Код: {{ article.slug }} </p>
+    <p> Активность: {% if article.isActive %}активна{% else %}не активна{% endif %} </p>
+    <p> Количество просмотров: {{ article.viewCount|viewsFormat }} </p>
+    <p> Описание: {{ article.description }} </p>
+    <p> Дата создания: {{ article.createdAt|date('Y-m-d H:i:s') }} </p>
+    
+
+{% endblock %}
